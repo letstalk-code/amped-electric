@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand-red: #CC0000;
+  --color-brand-red-dark: #990000;
+  --color-brand-yellow: #FFD700;
+  --color-brand-yellow-dark: #E6C200;
+  --color-dark: #0D0D0D;
+  --color-dark-card: #1A1A2E;
+  --color-dark-muted: #2A2A3E;
+  --color-light: #F7F7F7;
+  --color-gray-text: #6B7280;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Diagonal clip-path utility */
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.clip-diagonal-reverse {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+.clip-diagonal-top {
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Lightning bolt accent animation */
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-flash {
+  animation: flash 2s ease-in-out infinite;
+}
+
+/* Geometric grid pattern */
+.geometric-grid {
+  background-image:
+    linear-gradient(rgba(255, 215, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 215, 0, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
