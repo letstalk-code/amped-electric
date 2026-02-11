@@ -8,10 +8,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Amped Electric, LLC | Licensed Electricians You Can Trust",
-  description:
-    "Amped Electric provides expert residential electrical services for homeowners. Licensed, insured, and award-winning. Get your free quote today.",
-  keywords: "electrician, electrical services, home electrical, panel upgrade, licensed electrician",
+  title: "Amped Electric | Licensed Electricians You Can Trust",
+  description: "Expert home electrical services. Licensed, insured, and committed to your safety. Watch our quick video update.",
+  openGraph: {
+    title: "Amped Electric | Licensed Electricians",
+    description: "Expert home electrical services. Licensed, insured, and committed to your safety. Watch our quick video update.",
+    type: "website",
+    url: "https://amped-electric.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amped Electric | Licensed Electricians",
+    description: "Expert home electrical services.",
+  }
 };
 
 export default function RootLayout({
